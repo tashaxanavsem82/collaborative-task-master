@@ -1,0 +1,20 @@
+{
+  "name": "collaborative-task-master",
+  "version": "1.0.0",
+  "description": "A web application for managing and tracking collaborative tasks.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo 'No tests specified' && exit 0"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9",
+    "dotenv": "^8.2.0",
+    "socket.io": "^3.0.0"
+  },
+  "devDependencies": {},
+  "keywords": ["task", "management", "collaboration"],
+  "author": "Your Name",
+  "license": "MIT"
+}
