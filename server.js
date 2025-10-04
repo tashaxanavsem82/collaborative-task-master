@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
   res.send('Welcome to Collaborative Task Master!');
 });
 
-oi.on('connection', (socket) => {
+io.on('connection', (socket) => {
   console.log('New client connected');
   socket.on('disconnect', () => {
     console.log('Client disconnected');
