@@ -21,6 +21,11 @@ app.get('/', (req, res) => {
   res.send('Welcome to Collaborative Task Master!');
 });
 
+// Health check endpoint
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'UP' });
+});
+
 io.on('connection', (socket) => {
   console.log('New client connected');
   socket.on('disconnect', () => {
