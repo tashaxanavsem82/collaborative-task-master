@@ -14,16 +14,14 @@ app.use(express.json());
 
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
-  useCreateIndex: true
+  useUnifiedTopology: true
 });
 
 app.get('/', (req, res) => {
   res.send('Welcome to Collaborative Task Master!');
 });
 
-io.on('connection', (socket) => {
+oi.on('connection', (socket) => {
   console.log('New client connected');
   socket.on('disconnect', () => {
     console.log('Client disconnected');
